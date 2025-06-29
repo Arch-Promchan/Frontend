@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Työpaikan kahvihuone | Finnish Language Centre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="showPage('etusivu')">
+                    <div class="logo-icon">S</div>
+                    <h1 data-translate="header-title">Suomen kielen oppiminen</h1>
+                </div>
+                <nav class="header-nav">
+                    <a href="#" onclick="showPage('etusivu')" class="active" data-translate="nav-home">Etusivu</a>
+                    <a href="#" onclick="showPage('oppimispolku')" data-translate="nav-learn">Opi suomea</a>
+                    <a href="#" onclick="showPage('palautetta')" data-translate="nav-feedback">Palautetta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Front Page / Etusivu -->
+        <section id="etusivu" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="hero-welcome" data-translate="hero-welcome">Tervetuloa</span><br>
+                            <span class="hero-main" data-translate="hero-main">Suomen kielen oppiminen.</span>
+                        </h1>
+                        <p class="hero-subtitle" data-translate="hero-subtitle">Kansainvälisille opiskelijoille</p>
+                        <p class="hero-description" data-translate="hero-description">
+                            Tervetuloa suomen kielen oppimisalustalle! Tämä alusta on suunniteltu 
+                            auttamaan kansainvälisiä opiskelijoita oppimaan suomen kielen sanastoa 
+                            ja fraaseja, joita käytetään yleisesti työpaikkaympäristössä.
+                        </p>
+                        <button class="hero-button" onclick="showPage('oppimispolku')" data-translate="hero-button">
+                            Aloita oppiminen →
+                        </button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://drive.google.com/thumbnail?id=1RkHAO6srV0wLSwjscdr_28vguZ7Bf36g&sz=s800" alt="Kahvihuone" class="hero-img">
+                        <div class="book-icon">📖</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Path Overview (3.jpg) -->
+        <section id="oppimispolku" class="page">
+            <div class="learning-path-page">
+                <div class="learning-path-sidebar">
+                    <h2 data-translate="learning-path-title">Oppimispolku</h2>
+                    <p data-translate="learning-path-description">
+                        Suorita nämä neljä interaktiivista moduulia hallitaksesi suomen kielen sanastoa ja 
+                        keskustelutaitoja työpaikka-asetuksissa. Jokainen moduuli rakentuu edellisen 
+                        päälle optimaalisen oppimisen takaamiseksi.
+                    </p>
+                </div>
+                <div class="learning-path-content">
+                    <div class="module-card blue">
+                        <div class="module-header">
+                            <span class="module-badge">MODUULI 1</span>
+                            <span class="module-time">⏱ 15 minuuttia</span>
+                        </div>
+                        <h3 data-translate="module1-title">Perussanasto</h3>
+                        <p data-translate="module1-description">
+                            Opi oleellista suomen sanastoa työpaikan taukohuoneeseen. 
+                            Hallitse äänteäminen äänioppaiden avulla ja harjoittele sana-kuva-
+                            yhdistämisharjoituksia.
+                        </p>
+                        <button class="module-start-btn" onclick="showPage('moduuli1-start')" data-translate="start-learning">
+                            Aloita oppiminen →
+                        </button>
+                        <div class="module-objectives">
+                            <h4 data-translate="learning-objectives">Mitä opit:</h4>
+                            <ul>
+                                <li data-translate="obj1-1">9 oleellista kahvilasanaa</li>
+                                <li data-translate="obj1-2">Harjoittele äänteämistä äänten kanssa</li>
+                                <li data-translate="obj1-3">Yhdistä sanat kuviin</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="module-card green">
+                        <div class="module-header">
+                            <span class="module-badge">MODUULI 2</span>
+                            <span class="module-time">⏱ 20 minuuttia</span>
+                        </div>
+                        <h3 data-translate="module2-title">Kuullun ymmärtäminen</h3>
+                        <p data-translate="module2-description">
+                            Harjoittele puhujan suomen ymmärtämistä kahviympäristössä. 
+                            Klikkaa kuvaa ääniohjeiden perusteella parantaaksesi 
+                            kuunteluharjoituksia.
+                        </p>
+                        <button class="module-start-btn" onclick="showPage('moduuli2-start')" data-translate="start-learning">
+                            Aloita oppiminen →
+                        </button>
+                        <div class="module-objectives">
+                            <h4 data-translate="learning-objectives">Mitä opit:</h4>
+                            <ul>
+                                <li data-translate="obj2-1">Kuuntele ohjeita suomeksi</li>
+                                <li data-translate="obj2-2">Tunnista esineitä kahvilakuvassa</li>
+                                <li data-translate="obj2-3">Parana kuullun ymmärtämistäsi</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="module-card purple">
+                        <div class="module-header">
+                            <span class="module-badge">MODUULI 3</span>
+                            <span class="module-time">⏱ 25 minuuttia</span>
+                        </div>
+                        <h3 data-translate="module3-title">Sana- ja lauseharjoitukset</h3>
+                        <p data-translate="module3-description">
+                            Harjoittele suomalaisten lauseiden muodostamista ja verbien oikeaa 
+                            käyttöä. Suorita kolme erilaista harjoitusta hallitaksesi 
+                            lauseenmuodostuksen ja verbien käytön.
+                        </p>
+                        <button class="module-start-btn" onclick="showPage('moduuli3')" data-translate="start-learning">
+                            Aloita oppiminen →
+                        </button>
+                        <div class="module-objectives">
+                            <h4 data-translate="learning-objectives">Mitä opit:</h4>
+                            <ul>
+                                <li data-translate="obj3-1">Yhdistä lauseiden alut ja lopet</li>
+                                <li data-translate="obj3-2">Opi yhteisiä suomen verbejä</li>
+                                <li data-translate="obj3-3">Harjoittele verbien käyttöä yhteyksissä</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="module-card orange">
+                        <div class="module-header">
+                            <span class="module-badge">MODUULI 4</span>
+                            <span class="module-time">⏱ 15 minuuttia</span>
+                        </div>
+                        <h3 data-translate="module4-title">Kuullun ymmärtämisen testi</h3>
+                        <p data-translate="module4-description">
+                            Testaa suomen ymmärtämistäsi tosielämän tekstipohjaisella testillä. Kuuntele 
+                            lausuntoja kahvilakuvasta ja määritä, ovatko ne oikeita vai vääriä.
+                        </p>
+                        <button class="module-start-btn" onclick="showPage('moduuli4')" data-translate="start-learning">
+                            Aloita oppiminen →
+                        </button>
+                        <div class="module-objectives">
+                            <h4 data-translate="learning-objectives">Mitä opit:</h4>
+                            <ul>
+                                <li data-translate="obj4-1">Kuuntele kuvauksia suomeksi</li>
+                                <li data-translate="obj4-2">Määritä ovatko lausunnot oikeita tai vääriä</li>
+                                <li data-translate="obj4-3">Testaa kokonaisvaltaista ymmärrystäsi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 1 Start Page (4.jpg) -->
+        <section id="moduuli1-start" class="page">
+            <div class="module-start-page">
+                <img src="https://drive.google.com/thumbnail?id=1RkHAO6srV0wLSwjscdr_28vguZ7Bf36g&sz=s800" alt="Kahvihuone" class="module-start-bg">
+                <div class="module-start-overlay">
+                    <h2 data-translate="module1-start-title">Työpaikan kahvihuone.</h2>
+                    <p data-translate="module1-start-description">
+                        Hei! Kello on 14 ja on iltapäiväkahvin aika. Mennään tänään 
+                        kahvilaan, tule mukaan! Opiskelemme samalla kahvilasanastoa 
+                        suomeksi. Tässä materiaalissa on neljä erilaista tehtävää. Opit 
+                        ensin perussanat. Sitten opit kuuntelemaan helppoja ohjeita, ja 
+                        lopuksi voit vielä harjoitella sanoja ja fraaseja lisää.
+                    </p>
+                    <button class="module-start-button" onclick="showPage('moduuli1')" data-translate="start-button">
+                        ▶ Aloita
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2 Start Page (9.jpg) -->
+        <section id="moduuli2-start" class="page">
+            <div class="module-start-page">
+                <img src="https://drive.google.com/thumbnail?id=1jSuQ52hk1IEW0oHvpqnYQDwdqG9twTva&sz=s800" alt="Kahvihuone" class="module-start-bg">
+                <div class="module-start-overlay">
+                    <h2 data-translate="module2-start-title">Kuullun ymmärtäminen</h2>
+                    <p data-translate="module2-start-description">
+                        Tässä on kuva kahvilasta. Kuuntele, mitä sinun 
+                        työkaverisi sanoo, ja etsi kuvasta tavarat. Klikkaa tai 
+                        näpäytä tavaraa.
+                    </p>
+                    <button class="module-start-button" onclick="showPage('moduuli2')" data-translate="start-button">
+                        ▶ Aloita
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Modules with Sidebar -->
+        <section id="learning-modules" class="page">
+            <div class="module-wrapper">
+                <div class="sidebar">
+                    <h3 data-translate="learning-path">Oppimispolku</h3>
+                    <ul class="module-list">
+                        <li class="module-item active" onclick="showModule('moduuli1')">
+                            <span class="module-bullet">•</span>
+                            <span data-translate="nav-module1">Perussanasto</span>
+                            <span class="module-indicator">1</span>
+                        </li>
+                        <li class="module-item" onclick="showModule('moduuli2')">
+                            <span class="module-bullet">•</span>
+                            <span data-translate="nav-module2">Kuullun ymmärtäminen</span>
+                        </li>
+                        <li class="module-item" onclick="showModule('moduuli3')">
+                            <span class="module-bullet">•</span>
+                            <span data-translate="nav-module3">Sana- ja lauseharjoitukset</span>
+                        </li>
+                        <li class="module-item" onclick="showModule('moduuli4')">
+                            <span class="module-bullet">•</span>
+                            <span data-translate="nav-module4">Kuullun ymmärtämisen testi</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="sidebar-navigation">
+                        <button class="nav-button nav-back" onclick="navigateModule('prev')">
+                            <span class="nav-arrow">←</span>
+                        </button>
+                        <button class="nav-button nav-forward" onclick="navigateModule('next')">
+                            <span class="nav-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="module-content">
+                    <!-- Module 1: Basic Vocabulary -->
+                    <div id="moduuli1" class="module-section active">
+                        <div class="module-header">
+                            <h2><span data-translate="module-title">Moduuli</span> <span class="module-number-large">1.</span></h2>
+                        </div>
+                        
+                        <div class="task-section">
+                            <div class="task-header">
+                                <h3 data-translate="vocabulary-title">Perussanasto</h3>
+                                <p data-translate="vocabulary-instruction">Klikkaa puhekuplaa ja kuuntele sana. Yhdistä sana oikeaan kuvaan.</p>
+                            </div>
+                            
+                            <div class="vocabulary-matching-task">
+                                <!-- Word bubbles grid - 2 rows: 6 + 3 = 9 total -->
+                                <div class="word-bubbles-container">
+                                    <div class="word-bubbles-row">
+                                        <div class="word-bubble" data-word="hunaja">
+                                            <button class="play-audio" onclick="playAudio('hunaja-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">hunaja</span>
+                                            <audio id="hunaja-audio" src="audio/hunaja.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="sokeri">
+                                            <button class="play-audio" onclick="playAudio('sokeri-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">sokeri</span>
+                                            <audio id="sokeri-audio" src="audio/sokeri.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="juomalasit">
+                                            <button class="play-audio" onclick="playAudio('juomalasit-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">juomalasit</span>
+                                            <audio id="juomalasit-audio" src="audio/juomalasit.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="teepussit">
+                                            <button class="play-audio" onclick="playAudio('teepussit-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">teepussit</span>
+                                            <audio id="teepussit-audio" src="audio/teepussit.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="kahvitermos">
+                                            <button class="play-audio" onclick="playAudio('kahvitermos-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">kahvitermos</span>
+                                            <audio id="kahvitermos-audio" src="audio/kahvitermos.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="kakkupalat">
+                                            <button class="play-audio" onclick="playAudio('kakkupalat-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">kakkupalat</span>
+                                            <audio id="kakkupalat-audio" src="audio/kakkupalat.mp3"></audio>
+                                        </div>
+                                    </div>
+                                    <div class="word-bubbles-row">
+                                        <div class="word-bubble" data-word="vedenkeitin">
+                                            <button class="play-audio" onclick="playAudio('vedenkeitin-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">vedenkeitin</span>
+                                            <audio id="vedenkeitin-audio" src="audio/vedenkeitin.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="kahviautomaatti">
+                                            <button class="play-audio" onclick="playAudio('kahviautomaatti-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">kahviautomaatti</span>
+                                            <audio id="kahviautomaatti-audio" src="audio/kahviautomaatti.mp3"></audio>
+                                        </div>
+                                        <div class="word-bubble" data-word="makeutusaine">
+                                            <button class="play-audio" onclick="playAudio('makeutusaine-audio')">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <span class="audio-icon">🔊</span>
+                                            <span class="question-mark">?</span>
+                                            <span class="word-text" style="display: none;">makeutusaine</span>
+                                            <audio id="makeutusaine-audio" src="audio/makeutusaine.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Images grid - 9 images in 2 rows -->
+                                <div class="images-container">
+                                    <div class="images-row">
+                                        <div class="vocab-image-container" data-word="vedenkeitin">
+                                            <img src="https://drive.google.com/thumbnail?id=1B3LgMYzXRIRIQFDxCcxpz9iYlwDBsPFe&sz=s800" alt="vedenkeitin" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="juomalasit">
+                                            <img src="https://drive.google.com/thumbnail?id=1OPdNo7I7hMqG25CX1yY5reQCZaUxsomW&sz=s800" alt="juomalasit" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="kahvitermos">
+                                            <img src="https://drive.google.com/thumbnail?id=1gN9cb_-ro-rIORIy8WQGTmkC0Z6FViZ-&sz=s800" alt="kahvitermos" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="kakkupalat">
+                                            <img src="https://drive.google.com/thumbnail?id=1hrO1XQy6rrNfdQjMQS11jXbpVRz_aEev&sz=s800" alt="kakkupalat" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="hunaja">
+                                            <img src="https://drive.google.com/thumbnail?id=1ZhIpu1M1qlTG7IN6XKiHUWZtEnw1lzoc&sz=s800" alt="hunaja" class="vocab-image">
+                                        </div>
+                                    </div>
+                                    <div class="images-row">
+                                        <div class="vocab-image-container" data-word="teepussit">
+                                            <img src="https://drive.google.com/thumbnail?id=1V6XSqVqH2ukCnZd5iQb206511bt2cPXe&sz=s800" alt="teepussit" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="kahviautomaatti">
+                                            <img src="https://drive.google.com/thumbnail?id=1WVQHdYbr4q31-ROPP4Q8sRyIxycBDHl-&sz=s800" alt="kahviautomaatti" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="sokeri">
+                                            <img src="https://drive.google.com/thumbnail?id=1WkZerKWcHYAApCscatfDDCbV_JrZJYxt&sz=s800" alt="sokeri" class="vocab-image">
+                                        </div>
+                                        <div class="vocab-image-container" data-word="makeutusaine">
+                                            <img src="https://drive.google.com/thumbnail?id=1DfZQ6Vwx1yZ0GIfnePQLSe9MjFMT1IH6&sz=s800" alt="makeutusaine" class="vocab-image">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-actions">
+                                    <button class="check-button" onclick="checkVocabularyAnswers()" data-translate="check-button">
+                                        ✓ Tarkista
+                                    </button>
+                                </div>
+                                
+                                <div class="module-completion" id="module1-completion" style="display: none;">
+                                    <button class="next-module-button" onclick="showPage('moduuli2-start')" data-translate="next-module">
+                                        Seuraava moduuli2 →
+                                    </button>
+                                    <div class="results-indicator">
+                                        <span data-translate="results">Tulokset</span>
+                                        <div class="score-circle">9 / 9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 2: Listening Comprehension -->
+                    <div id="moduuli2" class="module-section">
+                        <div class="module2-container">
+                            <div class="module2-header">
+                                <h2><span data-translate="module-title">Moduuli</span> <span class="module-number-large yellow">2.</span> <span class="module-subtitle yellow" data-translate="module2-subtitle">Kuullun ymmärtäminen</span></h2>
+                                <p class="module2-description" data-translate="module2-description">Tässä on kuva kahvilasta. Kuuntele, mitä sinun työkaverisi sanoo, ja etsi kuvasta tavarat. Klikkaa tai näpäytä tavaraa.</p>
+                            </div>
+                            
+                            <div class="module2-content">
+                                <div class="module2-image-container">
+                                    <img src="https://drive.google.com/thumbnail?id=1jSuQ52hk1IEW0oHvpqnYQDwdqG9twTva&sz=s800" alt="Kahvila" class="module2-image" id="module2-clickable-image">
+                                </div>
+                                
+                                <div class="module2-question-area">
+                                    <div class="module2-question-box" id="module2-question-box">
+                                        <div class="question-header">
+                                            <button class="module2-play-btn" onclick="playCurrentQuestion()">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <p id="module2-question-text">Hei! Tämä on mukava kahvila. Tässä kahvilassa on itsepalvelu. Se tarkoittaa, että sinä voit ottaa kahvia tai teetä itse. Kuvassa on paljon kaikkea sellaista, mitä tarvitset kahvilassa. Etsi minulle kuvasta seuraavat tavarat:</p>
+                                        </div>
+                                        <button class="module2-next-btn" onclick="nextModule2Question()" data-translate="next-button">seuraava ></button>
+                                    </div>
+                                    
+                                    <div class="module2-feedback" id="module2-feedback" style="display: none;">
+                                        <div class="feedback-content">
+                                            <p id="module2-feedback-text"></p>
+                                            <button class="feedback-action-btn" id="module2-feedback-btn" onclick="handleModule2Feedback()">Seuraava kysymys</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="module2-progress">
+                                    <div class="progress-label" data-translate="progress">Edistyminen</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="module2-progress-fill" style="width: 12.5%"></div>
+                                    </div>
+                                    <div class="progress-counter" id="module2-progress-counter">1 / 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 3: Word and Sentence Practice -->
+                    <div id="moduuli3" class="module-section">
+                        <div class="module-header">
+                            <h2><span data-translate="module-title">Moduuli</span> <span class="module-number-large yellow">3.</span> <span class="module-subtitle" data-translate="module3-subtitle">Sanojen ja lauseiden harjoittelu</span></h2>
+                        </div>
+                        
+                        <div class="exercise-tabs">
+                            <button class="tab-button active" onclick="showExercise('A')" data-translate="exercise-a">Harjoitus A</button>
+                            <button class="tab-button" onclick="showExercise('B')" data-translate="exercise-b">Harjoitus B</button>
+                            <button class="tab-button" onclick="showExercise('C')" data-translate="exercise-c">Harjoitus C</button>
+                        </div>
+                        
+                        <div class="exercise-content">
+                            <!-- Exercise A -->
+                            <div id="exercise-a" class="exercise-section active">
+                                <h3 class="exercise-title" data-translate="exercise-a-title">A. Harjoittele sanoja lisää. Yhdistä lauseet oikein.</h3>
+                                <p class="exercise-instruction" data-translate="exercise-a-instruction">Klikkaa suomalaista lausetta, sitten klikkaa sen jatkoa</p>
+                                
+                                <div class="matching-exercise">
+                                    <div class="matching-container">
+                                        <div class="matching-left">
+                                            <h4 data-translate="finnish-sentences">Suomalaiset lauseet</h4>
+                                            <div class="matching-item" data-id="1">Haluaisitko</div>
+                                            <div class="matching-item" data-id="2">Laitatko kahviin</div>
+                                            <div class="matching-item" data-id="3">Käytätkö teessä</div>
+                                            <div class="matching-item" data-id="4">Otatko jotain</div>
+                                            <div class="matching-item" data-id="5">Keitätkö vettä</div>
+                                            <div class="matching-item" data-id="6">Onko kahvitermoksessa</div>
+                                        </div>
+                                        
+                                        <div class="matching-right">
+                                            <h4 data-translate="sentence-endings">Lauseiden jatkot</h4>
+                                            <div class="matching-slot" data-match="1">ottaa kahvia vai teetä?</div>
+                                            <div class="matching-slot" data-match="2">makeutusainetta?</div>
+                                            <div class="matching-slot" data-match="3">hunajaa?</div>
+                                            <div class="matching-slot" data-match="4">kahviautomaatista?</div>
+                                            <div class="matching-slot" data-match="5">vedenkeittimellä?</div>
+                                            <div class="matching-slot" data-match="6">vielä kahvia?</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="task-actions">
+                                        <button class="check-button" onclick="checkMatchingAnswers('matching-a')" data-translate="check-button">
+                                            ✓ Tarkista
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Exercise B -->
+                            <div id="exercise-b" class="exercise-section">
+                                <h3 class="exercise-title" data-translate="exercise-b-title">B. Harjoittele lisää sanoja. Yhdistä lauseet oikein.</h3>
+                                <p class="exercise-instruction" data-translate="exercise-b-instruction">Klikkaa suomalaista lausetta, sitten klikkaa sen jatkoa</p>
+                                
+                                <div class="matching-exercise">
+                                    <div class="matching-container">
+                                        <div class="matching-left">
+                                            <h4 data-translate="finnish-sentences">Suomalaiset lauseet</h4>
+                                            <div class="matching-item" data-id="1">Kahvitermos</div>
+                                            <div class="matching-item" data-id="2">Vedenkeitin ei</div>
+                                            <div class="matching-item" data-id="3">Kahviautomaatti</div>
+                                            <div class="matching-item" data-id="4">Teepussit ovat</div>
+                                            <div class="matching-item" data-id="5">Juomalasit</div>
+                                            <div class="matching-item" data-id="6">Kakkupalat</div>
+                                        </div>
+                                        
+                                        <div class="matching-right">
+                                            <h4 data-translate="sentence-endings">Lauseiden jatkot</h4>
+                                            <div class="matching-slot" data-match="1">on tyhjä.</div>
+                                            <div class="matching-slot" data-match="2">toimi.</div>
+                                            <div class="matching-slot" data-match="3">on rikki.</div>
+                                            <div class="matching-slot" data-match="4">laatikossa.</div>
+                                            <div class="matching-slot" data-match="5">ovat hyllyllä.</div>
+                                            <div class="matching-slot" data-match="6">maistuvat herkullisilta.</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="task-actions">
+                                        <button class="check-button" onclick="checkMatchingAnswers('matching-b')" data-translate="check-button">
+                                            ✓ Tarkista
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Exercise C -->
+                            <div id="exercise-c" class="exercise-section">
+                                <h3 class="exercise-title" data-translate="exercise-c-title">C. Täydennä lauseet oikeilla verbeillä.</h3>
+                                <p class="exercise-instruction" data-translate="exercise-c-instruction">Valitse oikea verbi ja klikkaa tyhjää kohtaa</p>
+                                
+                                <div class="fill-in-exercise">
+                                    <div class="verb-options">
+                                        <button class="verb-option" onclick="selectVerb('Otatko')">Otatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Keitätkö')">Keitätkö</button>
+                                        <button class="verb-option" onclick="selectVerb('Käytätkö')">Käytätkö</button>
+                                        <button class="verb-option" onclick="selectVerb('Laitatko')">Laitatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Kaadatko')">Kaadatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Sekoitatko')">Sekoitatko</button>
+                                    </div>
+                                    
+                                    <div class="fill-in-sentences">
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Otatko">[___________]</span> sinä kahvia vai teetä?
+                                        </div>
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Keitätkö">[___________]</span> vähän teevettä vedenkeittimellä?
+                                        </div>
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Käytätkö">[___________]</span> sinä kahvissa makeutusainetta?
+                                        </div>
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Laitatko">[___________]</span> likaiset astiat tuolle pöydälle?
+                                        </div>
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Kaadatko">[___________]</span> minulle vähän lisää kahvia tähän kuppiin?
+                                        </div>
+                                        <div class="fill-in-sentence">
+                                            <span class="fill-in-blank" data-correct="Sekoitatko">[___________]</span> sinä teehen hunajaa?
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="task-actions">
+                                        <button class="check-button" onclick="checkFillInAnswers()" data-translate="check-button">
+                                            ✓ Tarkista
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 4: Text Comprehension -->
+                    <div id="moduuli4" class="module-section">
+                        <div class="module4-container">
+                            <div class="module4-header">
+                                <h2><span data-translate="module-title">Moduuli</span> <span class="module-number-large yellow">4.</span> <span class="module-subtitle yellow" data-translate="module4-subtitle">Kuullun ymmärtämisen testi</span></h2>
+                                <p class="module4-description" data-translate="module4-description">Katso kuvaa, kuuntele ja klikkaa, onko lause oikein vai väärin.</p>
+                            </div>
+                            
+                            <div class="module4-content">
+                                <div class="module4-image-container">
+                                    <img src="https://drive.google.com/thumbnail?id=18QTgdcO7aa1uF8auHozr-jT3-I5_yHBF&sz=s800" alt="Kahvila" class="module4-image">
+                                </div>
+                                
+                                <div class="module4-question-area">
+                                    <div class="module4-question-box">
+                                        <div class="question-header">
+                                            <button class="module4-play-btn" onclick="playModule4Question()">
+                                                <span class="play-icon">▶</span>
+                                            </button>
+                                            <p id="module4-question-text">Kahvilan seinä on vihreä.</p>
+                                        </div>
+                                        <div class="module4-answer-buttons">
+                                            <button class="module4-answer-btn correct-btn" onclick="answerModule4Question('true')" data-translate="correct">oikein</button>
+                                            <button class="module4-answer-btn incorrect-btn" onclick="answerModule4Question('false')" data-translate="incorrect">väärin</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="module4-feedback" id="module4-feedback" style="display: none;">
+                                        <div class="feedback-content">
+                                            <p id="module4-feedback-text"></p>
+                                            <button class="feedback-action-btn" id="module4-feedback-btn" onclick="handleModule4Feedback()">Seuraava kysymys</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="module4-progress">
+                                    <div class="progress-label" data-translate="progress">Edistyminen</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="module4-progress-fill" style="width: 16.67%"></div>
+                                    </div>
+                                    <div class="progress-counter" id="module4-progress-counter">1 / 6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Page -->
+        <section id="palautetta" class="page">
+            <div class="feedback-page">
+                <div class="feedback-header">
+                    <div class="feedback-title">
+                        <span class="feedback-icon">👍</span>
+                        <h2 data-translate="feedback-title">Anna palautetta</h2>
+                    </div>
+                    <div class="language-toggle">
+                        <button class="lang-btn active" onclick="changeLanguage('fi')">FI</button>
+                        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    </div>
+                </div>
+                
+                <div class="feedback-content">
+                    <p class="feedback-description" data-translate="feedback-description">
+                        Arvostamme palautettasi oppimaterialeistamme. Kerro meille kokemuksistasi ja mahdollisista parannusehdotuksista.
+                    </p>
+                    
+                    <form class="feedback-form" onsubmit="submitFeedback(event)">
+                        <div class="form-group">
+                            <label data-translate="rating-question">Miten arvioisit kokemuksesi oppimaterialeistamme? *</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="rating" value="excellent">
+                                    <span data-translate="excellent">Erinomainen</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="rating" value="good">
+                                    <span data-translate="good">Hyvä</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="rating" value="average">
+                                    <span data-translate="average">Keskinkertainen</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="rating" value="poor">
+                                    <span data-translate="poor">Huono</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label data-translate="suggestions-question">Mitä voisimme parantaa?</label>
+                            <textarea placeholder="Your suggestions..." data-translate-placeholder="suggestions-placeholder" rows="6"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button" data-translate="submit-feedback">Lähetä palaute</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
