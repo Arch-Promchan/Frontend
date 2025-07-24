@@ -458,21 +458,6 @@ header {
   font-size: 1.2rem;
 }
 
-.module-indicator {
-  position: absolute;
-  right: 0;
-  background: var(--accent-yellow);
-  color: var(--text-dark);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
 .check-mark {
   position: absolute;
   right: 0;
@@ -570,7 +555,7 @@ header {
   opacity: 0.9;
 }
 
-/* Module 1 - Vocabulary Matching */
+/* Module 1 - Vocabulary Matching with Larger Images */
 .vocabulary-matching-task {
   display: flex;
   flex-direction: column;
@@ -585,8 +570,9 @@ header {
 
 .word-bubbles-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  justify-items: center;
 }
 
 .word-bubble {
@@ -598,6 +584,7 @@ header {
   transition: all 0.3s;
   position: relative;
   min-height: 80px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -667,53 +654,67 @@ header {
   display: block !important;
 }
 
-.images-container {
+/* Large images container for Module 1 */
+.images-container-large {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
+  margin-top: 2rem;
 }
 
-.images-row {
+.images-row-large {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
 }
 
-.vocab-image-container {
-  aspect-ratio: 1;
+.vocab-image-container-large {
+  width: 250px; /* Increased from 200px */
+  height: 250px; /* Increased from 200px */
   border-radius: var(--border-radius);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
+  border: 3px solid transparent;
 }
 
-.vocab-image-container:hover {
+.vocab-image-container-large:hover {
   transform: scale(1.05);
+  border-color: var(--secondary-blue);
 }
 
-.vocab-image-container.matched {
+.vocab-image-container-large.matched {
   border: 3px solid var(--success-green);
-}
-
-.vocab-image-container.matched::after {
-  content: attr(data-word);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--success-green);
-  color: var(--white);
-  padding: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.8rem;
 }
 
 .vocab-image {
   width: 100%;
-  height: 100%;
+  height: 100%; /* Changed from auto to 100% */
   object-fit: cover;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: none;
+}
+
+.vocab-image-container-large.matched .image-label {
+  opacity: 1;
+  display: block;
+  background: var(--success-green);
 }
 
 .module-completion {
@@ -762,7 +763,7 @@ header {
   font-size: 1.2rem;
 }
 
-/* Module 2 - New Layout */
+/* Module 2 - Enhanced with Clear Clickable Frames */
 .module2-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -797,6 +798,8 @@ header {
 .module2-image-container {
   text-align: center;
   position: relative;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .module2-image {
@@ -804,7 +807,88 @@ header {
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  display: block;
+}
+
+.clickable-frame {
+  position: absolute;
   cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.frame-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid #00ff00;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.frame-label {
+  display: none;
+}
+
+.clickable-frame:hover .frame-border {
+  border-color: var(--accent-yellow);
+  border-width: 4px;
+  opacity: 1;
+}
+
+.clickable-frame:hover .frame-label {
+  opacity: 1;
+}
+
+.frame-1 {
+  /* Kahviautomaatti - large black coffee machine on left */
+  top: 40%;
+  left: 6%;
+  width: 22%;
+  height: 55%;
+}
+
+.frame-2 {
+  /* Vedenkeitin - white kettle in middle area */
+  top: 55%;
+  left: 37%;
+  width: 9%;
+  height: 25%;
+}
+
+.frame-3 {
+  /* Kahvitermos - black thermoses in center */
+  top: 40%;
+  left: 45%;
+  width: 20%;
+  height: 25%;
+}
+
+.frame-4 {
+  /* Hunaja - honey jars on counter */
+  top: 70%;
+  left: 28%;
+  width: 9%;
+  height: 18%;
+}
+
+.frame-5 {
+  /* Teepussit - tea bags near kettle */
+  top: 80%;
+  left: 38%;
+  width: 10%;
+  height: 11%;
+}
+
+.frame-6 {
+  /* Makeutusaine - sweetener containers */
+  top: 75%;
+  left: 48%;
+  width: 9%;
+  height: 18%;
 }
 
 .module2-question-area {
@@ -1431,6 +1515,11 @@ header {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .vocab-image-container-large {
+    width: 200px; /* Increased from 160px */
+    height: 200px; /* Increased from 160px */
+  }
 }
 
 @media (max-width: 768px) {
@@ -1456,11 +1545,16 @@ header {
   }
 
   .word-bubbles-row {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .images-row {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  .images-row-large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vocab-image-container-large {
+    width: 180px; /* Increased from 140px */
+    height: 180px; /* Increased from 140px */
   }
 
   .task-actions {
@@ -1499,6 +1593,11 @@ header {
   .module2-next-btn {
     align-self: center;
   }
+
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1524,5 +1623,18 @@ header {
 
   .feedback-content {
     padding: 1rem;
+  }
+
+  .vocab-image-container-large {
+    width: 150px; /* Increased from 120px */
+    height: 150px; /* Increased from 120px */
+  }
+
+  .word-bubbles-row {
+    grid-template-columns: 1fr;
+  }
+
+  .images-row-large {
+    grid-template-columns: 1fr;
   }
 }
