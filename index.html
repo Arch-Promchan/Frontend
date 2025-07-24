@@ -152,7 +152,7 @@
                             <h4 data-translate="learning-objectives">Mitä opit:</h4>
                             <ul>
                                 <li data-translate="obj4-1">Kuuntele kuvauksia suomeksi</li>
-                                <li data-translate="obj4-2">Määritä ovatko lausunnot oikeita tai vääriä</li>
+                                <li data-translate="obj4-2">Määritä ovatko lausunnot oikeita vai vääriä</li>
                                 <li data-translate="obj4-3">Testaa kokonaisvaltaista ymmärrystäsi</li>
                             </ul>
                         </div>
@@ -208,7 +208,6 @@
                         <li class="module-item active" onclick="showModule('moduuli1')">
                             <span class="module-bullet">•</span>
                             <span data-translate="nav-module1">Perussanasto</span>
-                            <span class="module-indicator">1</span>
                         </li>
                         <li class="module-item" onclick="showModule('moduuli2')">
                             <span class="module-bullet">•</span>
@@ -248,7 +247,7 @@
                             </div>
                             
                             <div class="vocabulary-matching-task">
-                                <!-- Word bubbles grid - 2 rows: 6 + 3 = 9 total -->
+                                <!-- Word bubbles grid - 3 rows: 3 + 3 + 3 = 9 total -->
                                 <div class="word-bubbles-container">
                                     <div class="word-bubbles-row">
                                         <div class="word-bubble" data-word="hunaja">
@@ -278,6 +277,8 @@
                                             <span class="word-text" style="display: none;">juomalasit</span>
                                             <audio id="juomalasit-audio" src="audio/juomalasit.mp3"></audio>
                                         </div>
+                                    </div>
+                                    <div class="word-bubbles-row">
                                         <div class="word-bubble" data-word="teepussit">
                                             <button class="play-audio" onclick="playAudio('teepussit-audio')">
                                                 <span class="play-icon">▶</span>
@@ -337,37 +338,48 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Images grid - 9 images in 2 rows -->
-                                <div class="images-container">
-                                    <div class="images-row">
-                                        <div class="vocab-image-container" data-word="vedenkeitin">
+                                <!-- Images grid - 9 images with bigger size and closer spacing -->
+                                <div class="images-container-large">
+                                    <div class="images-row-large">
+                                        <div class="vocab-image-container-large" data-word="vedenkeitin">
                                             <img src="https://drive.google.com/thumbnail?id=1B3LgMYzXRIRIQFDxCcxpz9iYlwDBsPFe&sz=s800" alt="vedenkeitin" class="vocab-image">
+                                            <div class="image-label">vedenkeitin</div>
                                         </div>
-                                        <div class="vocab-image-container" data-word="juomalasit">
+                                        <div class="vocab-image-container-large" data-word="juomalasit">
                                             <img src="https://drive.google.com/thumbnail?id=1OPdNo7I7hMqG25CX1yY5reQCZaUxsomW&sz=s800" alt="juomalasit" class="vocab-image">
+                                            <div class="image-label">juomalasit</div>
                                         </div>
-                                        <div class="vocab-image-container" data-word="kahvitermos">
+                                        <div class="vocab-image-container-large" data-word="kahvitermos">
                                             <img src="https://drive.google.com/thumbnail?id=1gN9cb_-ro-rIORIy8WQGTmkC0Z6FViZ-&sz=s800" alt="kahvitermos" class="vocab-image">
-                                        </div>
-                                        <div class="vocab-image-container" data-word="kakkupalat">
-                                            <img src="https://drive.google.com/thumbnail?id=1hrO1XQy6rrNfdQjMQS11jXbpVRz_aEev&sz=s800" alt="kakkupalat" class="vocab-image">
-                                        </div>
-                                        <div class="vocab-image-container" data-word="hunaja">
-                                            <img src="https://drive.google.com/thumbnail?id=1ZhIpu1M1qlTG7IN6XKiHUWZtEnw1lzoc&sz=s800" alt="hunaja" class="vocab-image">
+                                            <div class="image-label">kahvitermos</div>
                                         </div>
                                     </div>
-                                    <div class="images-row">
-                                        <div class="vocab-image-container" data-word="teepussit">
+                                    <div class="images-row-large">
+                                        <div class="vocab-image-container-large" data-word="kakkupalat">
+                                            <img src="https://drive.google.com/thumbnail?id=1hrO1XQy6rrNfdQjMQS11jXbpVRz_aEev&sz=s800" alt="kakkupalat" class="vocab-image">
+                                            <div class="image-label">kakkupalat</div>
+                                        </div>
+                                        <div class="vocab-image-container-large" data-word="hunaja">
+                                            <img src="https://drive.google.com/thumbnail?id=1ZhIpu1M1qlTG7IN6XKiHUWZtEnw1lzoc&sz=s800" alt="hunaja" class="vocab-image">
+                                            <div class="image-label">hunaja</div>
+                                        </div>
+                                        <div class="vocab-image-container-large" data-word="teepussit">
                                             <img src="https://drive.google.com/thumbnail?id=1V6XSqVqH2ukCnZd5iQb206511bt2cPXe&sz=s800" alt="teepussit" class="vocab-image">
+                                            <div class="image-label">teepussit</div>
                                         </div>
-                                        <div class="vocab-image-container" data-word="kahviautomaatti">
+                                    </div>
+                                    <div class="images-row-large">
+                                        <div class="vocab-image-container-large" data-word="kahviautomaatti">
                                             <img src="https://drive.google.com/thumbnail?id=1WVQHdYbr4q31-ROPP4Q8sRyIxycBDHl-&sz=s800" alt="kahviautomaatti" class="vocab-image">
+                                            <div class="image-label">kahviautomaatti</div>
                                         </div>
-                                        <div class="vocab-image-container" data-word="sokeri">
+                                        <div class="vocab-image-container-large" data-word="sokeri">
                                             <img src="https://drive.google.com/thumbnail?id=1WkZerKWcHYAApCscatfDDCbV_JrZJYxt&sz=s800" alt="sokeri" class="vocab-image">
+                                            <div class="image-label">sokeri</div>
                                         </div>
-                                        <div class="vocab-image-container" data-word="makeutusaine">
+                                        <div class="vocab-image-container-large" data-word="makeutusaine">
                                             <img src="https://drive.google.com/thumbnail?id=1DfZQ6Vwx1yZ0GIfnePQLSe9MjFMT1IH6&sz=s800" alt="makeutusaine" class="vocab-image">
+                                            <div class="image-label">makeutusaine</div>
                                         </div>
                                     </div>
                                 </div>
@@ -378,15 +390,6 @@
                                     </button>
                                 </div>
                                 
-                                <div class="module-completion" id="module1-completion" style="display: none;">
-                                    <button class="next-module-button" onclick="showPage('moduuli2-start')" data-translate="next-module">
-                                        Seuraava moduuli2 →
-                                    </button>
-                                    <div class="results-indicator">
-                                        <span data-translate="results">Tulokset</span>
-                                        <div class="score-circle">9 / 9</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -402,6 +405,31 @@
                             <div class="module2-content">
                                 <div class="module2-image-container">
                                     <img src="https://drive.google.com/thumbnail?id=1jSuQ52hk1IEW0oHvpqnYQDwdqG9twTva&sz=s800" alt="Kahvila" class="module2-image" id="module2-clickable-image">
+                                    
+                                    <!-- 6 Clickable frames matching the green rectangles in your image -->
+                                    <div class="clickable-frame frame-1" data-item="kahviautomaatti" onclick="checkModule2Answer('kahviautomaatti')">
+                                        <div class="frame-border"></div>
+                                    </div>
+                                    
+                                    <div class="clickable-frame frame-2" data-item="vedenkeitin" onclick="checkModule2Answer('vedenkeitin')">
+                                        <div class="frame-border"></div>
+                                    </div>
+                                    
+                                    <div class="clickable-frame frame-3" data-item="kahvitermos" onclick="checkModule2Answer('kahvitermos')">
+                                        <div class="frame-border"></div>
+                                    </div>
+                                    
+                                    <div class="clickable-frame frame-4" data-item="hunaja" onclick="checkModule2Answer('hunaja')">
+                                        <div class="frame-border"></div>
+                                    </div>
+                                    
+                                    <div class="clickable-frame frame-5" data-item="teepussit" onclick="checkModule2Answer('teepussit')">
+                                        <div class="frame-border"></div>
+                                    </div>
+                                    
+                                    <div class="clickable-frame frame-6" data-item="makeutusaine" onclick="checkModule2Answer('makeutusaine')">
+                                        <div class="frame-border"></div>
+                                    </div>
                                 </div>
                                 
                                 <div class="module2-question-area">
@@ -456,12 +484,12 @@
                                     <div class="matching-container">
                                         <div class="matching-left">
                                             <h4 data-translate="finnish-sentences">Suomalaiset lauseet</h4>
-                                            <div class="matching-item" data-id="1">Haluaisitko</div>
-                                            <div class="matching-item" data-id="2">Laitatko kahviin</div>
-                                            <div class="matching-item" data-id="3">Käytätkö teessä</div>
                                             <div class="matching-item" data-id="4">Otatko jotain</div>
-                                            <div class="matching-item" data-id="5">Keitätkö vettä</div>
+                                            <div class="matching-item" data-id="1">Haluaisitko</div>
                                             <div class="matching-item" data-id="6">Onko kahvitermoksessa</div>
+                                            <div class="matching-item" data-id="3">Käytätkö teessä</div>
+                                            <div class="matching-item" data-id="5">Keitätkö vettä</div>
+                                            <div class="matching-item" data-id="2">Laitatko kahviin</div>
                                         </div>
                                         
                                         <div class="matching-right">
@@ -473,6 +501,7 @@
                                             <div class="matching-slot" data-match="5">vedenkeittimellä?</div>
                                             <div class="matching-slot" data-match="6">vielä kahvia?</div>
                                         </div>
+                                    
                                     </div>
                                     
                                     <div class="task-actions">
@@ -492,12 +521,12 @@
                                     <div class="matching-container">
                                         <div class="matching-left">
                                             <h4 data-translate="finnish-sentences">Suomalaiset lauseet</h4>
-                                            <div class="matching-item" data-id="1">Kahvitermos</div>
-                                            <div class="matching-item" data-id="2">Vedenkeitin ei</div>
                                             <div class="matching-item" data-id="3">Kahviautomaatti</div>
-                                            <div class="matching-item" data-id="4">Teepussit ovat</div>
-                                            <div class="matching-item" data-id="5">Juomalasit</div>
                                             <div class="matching-item" data-id="6">Kakkupalat</div>
+                                            <div class="matching-item" data-id="1">Kahvitermos</div>
+                                            <div class="matching-item" data-id="4">Teepussit ovat</div>
+                                            <div class="matching-item" data-id="2">Vedenkeitin ei</div>
+                                            <div class="matching-item" data-id="5">Juomalasit</div>
                                         </div>
                                         
                                         <div class="matching-right">
@@ -526,12 +555,12 @@
                                 
                                 <div class="fill-in-exercise">
                                     <div class="verb-options">
-                                        <button class="verb-option" onclick="selectVerb('Otatko')">Otatko</button>
                                         <button class="verb-option" onclick="selectVerb('Keitätkö')">Keitätkö</button>
-                                        <button class="verb-option" onclick="selectVerb('Käytätkö')">Käytätkö</button>
-                                        <button class="verb-option" onclick="selectVerb('Laitatko')">Laitatko</button>
-                                        <button class="verb-option" onclick="selectVerb('Kaadatko')">Kaadatko</button>
                                         <button class="verb-option" onclick="selectVerb('Sekoitatko')">Sekoitatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Otatko')">Otatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Laitatko')">Laitatko</button>
+                                        <button class="verb-option" onclick="selectVerb('Käytätkö')">Käytätkö</button>
+                                        <button class="verb-option" onclick="selectVerb('Kaadatko')">Kaadatko</button>
                                     </div>
                                     
                                     <div class="fill-in-sentences">
